@@ -1,15 +1,14 @@
 {
+  "homepage": "http://Sabajmukhadze1996.github.io/api",
   "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "start": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "firebase deploy --only functions"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
